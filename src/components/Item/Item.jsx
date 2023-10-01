@@ -1,12 +1,12 @@
 import './Item.css';
-import { Container, Col} from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import {Link} from 'react-router-dom';
 
 const Item = ({id, nombre, precio, img, stock}) => {
 
     return(
         <Container> 
-                <Col>
                 <Card className='grupo-items' style={{ width: '18rem' }} >
                     <Card.Img variant="top" src={img} className='img-catalogo'/>
                     <Card.Body>
@@ -17,10 +17,9 @@ const Item = ({id, nombre, precio, img, stock}) => {
                         <Card.Text>
                         Cantidad Disponible: {stock}
                         </Card.Text>
-                        <link to={`/item/${id}`} className='option'/>
+                        <Link to={`/itemDetail/${id}`} className='boton-detalle'>Ver Detalle</Link>
                     </Card.Body>
                 </Card>
-                </Col>
             </Container> 
         
     )

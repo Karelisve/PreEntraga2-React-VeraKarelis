@@ -42,3 +42,20 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
+  .boton-detalle {
+    background-color:  rgb(217, 179, 196);
+    color: black;
+    border: none;
+    margin-right: 10px;
+    margin-left: 0;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  
+  .boton-detalle:hover {
+    color: white;
+    background-color:  rgb(131, 24, 68);
+  }
+  

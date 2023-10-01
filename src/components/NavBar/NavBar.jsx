@@ -13,11 +13,11 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} activeClassName to='/' className='nav-link'>Inicio</Nav.Link>
+            <Nav.Link as={NavLink}  to='/' className='nav-link'>Inicio</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink} activeClassName to='/categoria/plantas' className='drop-item'>Plantas</NavDropdown.Item>
-              <NavDropdown.Item  as={NavLink} activeClassName to='/categoria/macetas' className='drop-item'>Macetas</NavDropdown.Item>
-              <NavDropdown.Item  as={NavLink} activeClassName to='/categoria/accesorios' className='drop-item'>Accesorios</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink}  to='/categoria/plantas' className='drop-item'>Plantas</NavDropdown.Item>
+              <NavDropdown.Item  as={NavLink}  to='/categoria/macetas' className='drop-item'>Macetas</NavDropdown.Item>
+              <NavDropdown.Item  as={NavLink}  to='/categoria/accesorios' className='drop-item'>Accesorios</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#Contacto" className='nav-link'>Contacto</Nav.Link>
           </Nav>
