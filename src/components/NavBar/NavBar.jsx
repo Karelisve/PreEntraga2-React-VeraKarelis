@@ -1,7 +1,9 @@
 import React from 'react';
+import './NavBar.css';
 import CardWidget from "../CardWidget/CardWidget"
 import logo from './assets/logo.png'
 import { Navbar, Nav, NavDropdown, Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -11,11 +13,11 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className='nav-link'>Inicio</Nav.Link>
+            <Nav.Link as={NavLink} activeClassName to='/' className='nav-link'>Inicio</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#" className='drop-item'>Plantas</NavDropdown.Item>
-              <NavDropdown.Item href="#" className='drop-item'>Macetas</NavDropdown.Item>
-              <NavDropdown.Item href="#" className='drop-item'>Accesorios</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} activeClassName to='/categoria/plantas' className='drop-item'>Plantas</NavDropdown.Item>
+              <NavDropdown.Item  as={NavLink} activeClassName to='/categoria/macetas' className='drop-item'>Macetas</NavDropdown.Item>
+              <NavDropdown.Item  as={NavLink} activeClassName to='/categoria/accesorios' className='drop-item'>Accesorios</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#Contacto" className='nav-link'>Contacto</Nav.Link>
           </Nav>
